@@ -9,4 +9,9 @@ def test_invalid_name_no_pytest():
     # Think about what the test actually does and think about how to write them ourselves.
 
     # Replace this with your own logic
-    raise Exception("test not implemented")
+    try:
+        claim_unreserved_code_school_name("Ada Developers Academy")
+    except ValueError:
+        return
+    raise AssertionError("Expected ValueError")
+    #raise Exception("test not implemented")
